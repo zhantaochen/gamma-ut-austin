@@ -200,11 +200,244 @@ h1, h2, h3, h4, h5, h6, .nav, .logo-text {
 
 /* Option 3: Split background - image on right, content on left */
 
-.hero {
+/* .hero {
     padding: 60px 0;
     background: linear-gradient(90deg, rgba(248, 249, 250, 0.7) 40%, rgba(248, 249, 250, 0.7) 60%, rgba(248, 249, 250, 0.7) 80%, transparent 100%), 
                 url('../images/ut-campus-bg.jpg') right center/cover no-repeat;
     position: relative;
+} */
+
+/* Hero Section with Slideshow */
+.hero {
+    padding: 60px 0;
+    position: relative;
+    /* Remove the background declaration since we'll use slides */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Individual Slides */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Active slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* Apply the semi-transparent gradient overlay to each slide */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(248, 249, 250, 0.7) 40%, rgba(248, 249, 250, 0.7) 60%, rgba(248, 249, 250, 0.7) 80%, transparent 100%);
+}
+
+/* Image Credit */
+.image-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.image-credit:hover {
+    opacity: 1;
+}
+
+/* Slideshow Controls */
+.slideshow-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.slideshow-arrow {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.slideshow-arrow:hover {
+    background-color: rgba(191, 87, 0, 0.8);
+}
+
+.slideshow-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--ut-burnt-orange);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Ensure hero content remains above the slideshow */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments for slideshow */
+@media (max-width: 768px) {
+    .image-credit {
+        bottom: 70px; /* Move above the controls on mobile */
+    }
+    
+    .slideshow-controls {
+        bottom: 10px;
+    }
+}
+
+/* Critical CSS fixes for slideshow controls */
+
+/* Make slideshow container positioned correctly */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Lower z-index for container */
+    overflow: hidden;
+}
+
+/* Individual slides with proper z-index */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1; /* Above container but below controls */
+}
+
+/* Controls with highest z-index and clear positioning */
+.slideshow-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 100; /* Very high z-index to ensure clickability */
+    pointer-events: auto; /* Explicitly enable pointer events */
+}
+
+/* Make arrows more substantial and clearly clickable */
+.slideshow-arrow {
+    position: relative; /* Ensure positioning context */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker for better visibility */
+    width: 50px; /* Much larger target */
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 24px; /* Larger arrows */
+    z-index: 101; /* Above other controls */
+    pointer-events: auto; /* Explicitly enable pointer events */
+}
+
+/* Pointer events fix for the hero section */
+.hero {
+    padding: 60px 0;
+    position: relative;
+    pointer-events: auto; /* Ensure pointer events are enabled */
+}
+
+/* Ensure content is above slides */
+.hero-content {
+    position: relative;
+    z-index: 5; /* Above slides but below controls */
+    pointer-events: auto;
+}
+
+/* Make dots more prominent */
+.slideshow-dots {
+    display: flex;
+    gap: 10px;
+    z-index: 101;
+    pointer-events: auto;
+}
+
+.dot {
+    width: 15px; /* Larger dots */
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+/* Explicitly ensure that parent elements don't block clicks */
+.hero-section, .slideshow-container, .slide, .slideshow-controls, 
+.slideshow-dots, .slideshow-arrow, .dot {
+    pointer-events: auto !important;
 }
 
 

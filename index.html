@@ -6,6 +6,40 @@
     <title>GAMMA @ UT Austin - Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/news.js"></script>
+    <style>
+        /* Additional CSS to ensure buttons are clickable */
+        .slideshow-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            z-index: 10; /* Ensure controls are above slides */
+        }
+        
+        .slideshow-arrow {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 30px; /* Slightly larger for easier clicking */
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s ease;
+            z-index: 10;
+            font-size: 18px; /* Larger font */
+        }
+
+        .slideshow-arrow:hover {
+            background-color: var(--ut-burnt-orange);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -28,7 +62,26 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero-section">
+        <div class="slideshow-container">
+            <div class="slide active" style="background-image: url('assets/images/ut-campus-bg.jpg');">
+                <div class="image-credit">Image: UT Austin Tower © The University of Texas at Austin</div>
+            </div>
+            <div class="slide" style="background-image: url('assets/images/spi.png');">
+                <div class="image-credit">Image: Rajan Plumley</div>
+            </div>
+            
+            <!-- Slideshow controls - removed inline onclick handlers -->
+            <div class="slideshow-controls">
+                <div class="slideshow-arrow prev" id="prev-btn">&#10094;</div>
+                <div class="slideshow-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                </div>
+                <div class="slideshow-arrow next" id="next-btn">&#10095;</div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -64,14 +117,86 @@
         </div>
     </section>
 
-    <!-- <main class="main-content">
-        <div class="container">
-            <section class="section">
-                <h2>Overview</h2>
-                <p></p>
-            </section>
-
-        </div>
-    </main> -->
+    <!-- Slideshow JavaScript - Using proper event listeners -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM fully loaded - initializing slideshow");
+            
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const totalSlides = slides.length;
+            
+            console.log(`Found ${totalSlides} slides and ${dots.length} dots`);
+            
+            // Auto-advance slides every 8 seconds
+            let slideInterval = setInterval(() => changeSlide(1), 8000);
+            
+            function changeSlide(direction) {
+                console.log(`Changing slide, direction: ${direction}`);
+                
+                // Reset the interval whenever a manual navigation occurs
+                clearInterval(slideInterval);
+                slideInterval = setInterval(() => changeSlide(1), 8000);
+                
+                // Calculate the new slide index
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+                console.log(`New current slide: ${currentSlide}`);
+                
+                updateSlideDisplay();
+            }
+            
+            function setSlide(slideIndex) {
+                console.log(`Setting slide to index: ${slideIndex}`);
+                
+                // Reset the interval whenever a manual navigation occurs
+                clearInterval(slideInterval);
+                slideInterval = setInterval(() => changeSlide(1), 8000);
+                
+                currentSlide = slideIndex;
+                updateSlideDisplay();
+            }
+            
+            function updateSlideDisplay() {
+                // Hide all slides and remove active class from dots
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    console.log(`Removed active class from slide ${i}`);
+                });
+                
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('active');
+                    console.log(`Removed active class from dot ${i}`);
+                });
+                
+                // Show the current slide and set active dot
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+                console.log(`Added active class to slide and dot ${currentSlide}`);
+            }
+            
+            // Add click event listeners for the arrows
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                console.log("Previous button clicked");
+                changeSlide(-1);
+            });
+            
+            document.getElementById('next-btn').addEventListener('click', function() {
+                console.log("Next button clicked");
+                changeSlide(1);
+            });
+            
+            // Add click event listeners for the dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    console.log(`Dot ${index} clicked`);
+                    setSlide(index);
+                });
+            });
+            
+            console.log("Slideshow fully initialized");
+        });
+    </script>
 </body>
 </html>
