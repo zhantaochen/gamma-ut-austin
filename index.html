@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UT Group</title>
+    <title>GAMMA @ UT Austin - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/news.js"></script>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">γ</div>
+                <span class="logo-text">GAMMA @ UT Austin</span>
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/team.html">Team</a></li>
+                    <li><a href="pages/openings.html">Openings</a></li>
+                    <li><a href="pages/research.html">Research</a></li>
+                    <li><a href="pages/publications.html">Publications</a></li>
+                    <li><a href="pages/news.html">News</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="university-info">
+                        <!-- <div class="university-logo">UT</div>
+                        <div class="university-text">
+                            <h2>Group for AI in Materials Modeling & Analytics (GAMMA)</h2>
+                            <p>The University of Texas at Austin</p>
+                        </div> -->
+                    </div>
+                    <h1>Welcome to the website of GAMMA!</h1>
+                    <div class="hero-description">
+                        <strong>GAMMA</strong> stands for <strong>G</strong>roup for <strong>A</strong>I in <strong>M</strong>aterials <strong>M</strong>odeling and <strong>A</strong>nalytics. We are part of the Walker Department of Mechanical Engineering at The University of Texas at Austin.
+                        <div style="height: 12px;"></div>
+                        <p>Our research integrates materials science, scattering methods, and machine learning to predict high-performance materials, infer properties from complex data, and design efficient experiments.</p> 
+                    </div>
+                </div>
+                
+                <div class="news-sidebar">
+                    <h3>News</h3>
+                    <div id="recent-news-container">
+                        <!-- News items will be loaded here by JavaScript -->
+                        <div class="news-item">
+                            <div class="news-date">Loading...</div>
+                            <div class="news-content">Loading recent news...</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="pages/news.html" style="color: var(--ut-burnt-orange); text-decoration: none; font-weight: 500;">View All News →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <main class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2>Overview</h2>
+                <p></p>
+            </section>
+
+        </div>
+    </main> -->
 </body>
 </html>

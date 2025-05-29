@@ -1,0 +1,711 @@
+/* UT Austin Research Group - Main Stylesheet */
+
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Alternative font combinations - uncomment your preferred option */
+
+/* Option 1: Modern and clean (current) */
+/* Uses Inter for body text - highly readable */
+
+/* Option 2: Academic and traditional */
+/*
+body {
+    font-family: 'Merriweather', Georgia, serif;
+}
+.hero-text h1, .section h1, .section h2 {
+    font-family: 'Inter', sans-serif;
+}
+*/
+
+/* Option 3: Mix of modern sans-serif for headings, serif for body */
+/*
+body {
+    font-family: 'Merriweather', Georgia, serif;
+}
+h1, h2, h3, h4, h5, h6, .nav, .logo-text {
+    font-family: 'Inter', sans-serif;
+}
+*/
+
+/* UT Austin Color Palette */
+:root {
+    --ut-burnt-orange: #bf5700;
+    --ut-secondary-orange: #f8971f;
+    --ut-yellow: #ffd600;
+    --ut-light-green: #a6cd57;
+    --ut-dark-green: #579d42;
+    --ut-teal: #00a9b7;
+    --ut-dark-blue: #005f86;
+    --ut-gray: #9cadb7;
+    --ut-warm-gray: #d6d2c4;
+    --ut-charcoal: #333f48;
+}
+
+/* Header Styles */
+.header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--ut-burnt-orange);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ut-charcoal);
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: white;
+    background-color: var(--ut-burnt-orange);
+}
+
+/* Layout Helpers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    padding: 60px 0;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section h1, .section h2 {
+    color: var(--ut-charcoal);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--ut-burnt-orange);
+}
+
+.section h1 {
+    font-size: 2.5rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.section a {
+    color: var(--ut-dark-blue);
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section (Home page) */
+/* .hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%), 
+                url('../images/ut-campus-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+} */
+
+/* Alternative background options - uncomment the one you prefer */
+
+/* Option 1: Darker overlay for better text contrast */
+
+/* .hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(51, 63, 72, 0.8) 0%, rgba(191, 87, 0, 0.1) 100%), 
+                url('../images/ut-campus-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+} */
+
+
+/* Option 2: Subtle texture with UT tower image */
+
+/* .hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 249, 250, 0.88) 100%), 
+                url('../images/ut-tower.jpg') right center/contain no-repeat,
+                linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+} */
+
+
+/* Option 3: Split background - image on right, content on left */
+
+.hero {
+    padding: 60px 0;
+    background: linear-gradient(90deg, rgba(248, 249, 250, 0.7) 40%, rgba(248, 249, 250, 0.7) 60%, rgba(248, 249, 250, 0.7) 80%, transparent 100%), 
+                url('../images/ut-campus-bg.jpg') right center/cover no-repeat;
+    position: relative;
+}
+
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ut-charcoal);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    border: none;
+    padding: 0;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+    /* Add subtle shadow for better readability over background */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--ut-burnt-orange);
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--ut-charcoal);
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--ut-burnt-orange);
+}
+
+.hero-description strong {
+    color: var(--ut-burnt-orange);
+    font-weight: 600;
+}
+
+/* .hero-description p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--ut-charcoal);
+} */
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--ut-charcoal);
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.25); /* More transparent: was 0.9, now 0.75 */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--ut-burnt-orange);
+    backdrop-filter: blur(8px); /* Adds subtle glass effect */
+}
+
+.university-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.university-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--ut-burnt-orange);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.university-text h2 {
+    font-size: 1.8rem;
+    color: var(--ut-charcoal);
+    margin-bottom: 5px;
+    border: none;
+    padding: 0;
+}
+
+.university-text p {
+    color: var(--ut-burnt-orange);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* News Sidebar */
+.news-sidebar {
+    background-color: rgba(255, 255, 255, 0.25); /* More transparent: was 0.9, now 0.75 */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--ut-burnt-orange);
+    height: fit-content;
+    max-height: 500px; /* Fixed maximum height */
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px); /* Adds a glassmorphism effect */
+}
+
+.news-sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--ut-charcoal);
+    flex-shrink: 0; /* Don't shrink the title */
+}
+
+#recent-news-container {
+    flex: 1;
+    overflow-y: auto; /* Make it scrollable */
+    max-height: 350px; /* Limit the scrollable area */
+    margin-bottom: 15px;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Custom scrollbar styling */
+#recent-news-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#recent-news-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#recent-news-container::-webkit-scrollbar-thumb {
+    background: var(--ut-burnt-orange);
+    border-radius: 3px;
+}
+
+#recent-news-container::-webkit-scrollbar-thumb:hover {
+    background: var(--ut-secondary-orange);
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: var(--ut-gray);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.news-content {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.news-content a {
+    color: var(--ut-dark-blue);
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+/* Team Styles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    transition: transform 0.3s;
+    border-top: 4px solid var(--ut-burnt-orange);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+/* Team Member Photo Styles - Supporting both placeholder and real images */
+
+/* Base styles for all member photos */
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 3px solid white;
+}
+
+/* Styles for placeholder (gradient background with initials) */
+.member-photo.placeholder {
+    background: linear-gradient(135deg, var(--ut-burnt-orange), var(--ut-secondary-orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Styles for real images */
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect for real images */
+.member-photo:hover img {
+    transform: scale(1.1);
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ut-charcoal);
+    margin-bottom: 8px;
+}
+
+.member-role {
+    color: var(--ut-burnt-orange);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.member-background {
+    color: var(--ut-dark-blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background-color: rgba(191, 87, 0, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid var(--ut-burnt-orange);
+    line-height: 1.4;
+    white-space: pre-line; /* This allows line breaks */
+}
+
+.member-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Research Styles */
+/* Research Area Styles - Updated with image support */
+.research-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.research-area {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--ut-teal);
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.research-area:hover {
+    transform: translateY(-5px);
+}
+
+.research-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.research-content h3 {
+    color: var(--ut-charcoal);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.research-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.research-image {
+    width: 450px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* For research areas without images */
+.research-area:not(:has(.research-image)) {
+    border-radius: 12px;
+}
+
+/* Responsive adjustments for research areas */
+@media (max-width: 768px) {
+    .research-area {
+        flex-direction: column;
+    }
+    
+    .research-image {
+        width: 100%;
+        height: 200px;
+        order: -1; /* Image appears above content on mobile */
+    }
+    
+    .research-content {
+        padding: 20px;
+    }
+}
+
+/* Publications Styles */
+.publications {
+    margin-top: 30px;
+}
+
+.publication-item {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--ut-dark-green);
+}
+
+.publication-title {
+    font-weight: 600;
+    color: var(--ut-charcoal);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.publication-authors {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.publication-venue {
+    color: var(--ut-dark-blue);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Contact Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--ut-burnt-orange);
+}
+
+.contact-info h3 {
+    color: var(--ut-charcoal);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info strong {
+    color: var(--ut-burnt-orange);
+}
+
+/* News Archive Styles (for news.html) */
+.news-archive {
+    margin-top: 30px;
+}
+
+.news-article {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--ut-burnt-orange);
+}
+
+.news-article h3 {
+    color: var(--ut-charcoal);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.news-article .news-date {
+    font-size: 0.9rem;
+    color: var(--ut-gray);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.news-article .news-content {
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-article .news-content p {
+    margin-bottom: 15px;
+}
+
+.news-article .news-content ul {
+    margin-bottom: 15px;
+}
+
+.news-article .news-content a {
+    color: var(--ut-dark-blue);
+    text-decoration: none;
+}
+
+.news-article .news-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .research-areas {
+        grid-template-columns: 1fr;
+    }
+}
