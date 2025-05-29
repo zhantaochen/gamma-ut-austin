@@ -404,7 +404,7 @@ h1, h2, h3, h4, h5, h6, .nav, .logo-text {
 
 /* Pointer events fix for the hero section */
 .hero {
-    padding: 60px 0;
+    padding: 100px 0 120px;
     position: relative;
     pointer-events: auto; /* Ensure pointer events are enabled */
 }
