@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "August 27, 2025",
+        title: "Preprint Released: An Agentic Artificially Intelligent X-ray Scientist",
+        content: "Our team has released a new preprint demonstrating the first AI agent capable of autonomously planning and executing X-ray scattering experiments on a real beamline at BL17-2, SSRL, SLAC! Read more here: <a href='https://doi.org/10.21203/rs.3.rs-7456716/v1' target='_blank' rel='noopener noreferrer'>https://doi.org/10.21203/rs.3.rs-7456716/v1</a>.",
+        isRecent: true
+    },
+    {
         date: "May 29, 2025",
         title: "New Website Launch",
         content: "We are thrilled to launch our research group website! Thanks to the Claude Sonnet 4 :).",
