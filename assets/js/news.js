@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "January 6, 2026",
+        title: "New Members Join the GAMMA Group",
+        content: "Welcome David, Ian, and Roy to the group! David and Ian will pursue their master's theses on agentic AI systems for autonomous laboratories, while Roy joins as an Undergraduate Research Assistant (URA) working on Bayesian methods for parameter inversion and experimental design for neutron scattering experiments.",
+        isRecent: true
+    },
+    {
         date: "August 27, 2025",
         title: "Preprint Released: An Agentic Artificially Intelligent X-ray Scientist",
         content: "Our team has released a new preprint demonstrating the first AI agent capable of autonomously planning and executing X-ray scattering experiments on a real beamline at BL17-2, SSRL, SLAC! Read more here: <a href='https://doi.org/10.21203/rs.3.rs-7456716/v1' target='_blank' rel='noopener noreferrer'>https://doi.org/10.21203/rs.3.rs-7456716/v1</a>.",
