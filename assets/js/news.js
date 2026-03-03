@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "Mar 3, 2026",
+        title: "Welcome Tianyu to GAMMA",
+        content: "Tianyu will join us in Summer 2026 as a PhD student, working on machine learning and agentic AI methods for computational materials. We are excited to have him on board!",
+        isRecent: true
+    },
+    {
         date: "January 6, 2026",
         title: "New Members Join the GAMMA Group",
         content: "Welcome David, Ian, and Roy to the group! David and Ian will pursue their master's theses on agentic AI systems for autonomous laboratories, while Roy joins as an Undergraduate Research Assistant (URA) working on Bayesian methods for parameter inversion and experimental design for neutron scattering experiments.",
@@ -18,7 +24,7 @@ const newsData = [
         date: "May 29, 2025",
         title: "New Website Launch",
         content: "We are thrilled to launch our research group website! Thanks to the Claude Sonnet 4 :).",
-        isRecent: true
+        isRecent: false
     },
 ];
 
