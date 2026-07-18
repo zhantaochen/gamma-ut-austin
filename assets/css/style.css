@@ -852,6 +852,40 @@ h1, h2, h3, h4, h5, h6, .nav, .logo-text {
     color: var(--ut-burnt-orange);
 }
 
+.visit-location {
+    margin-top: 30px;
+}
+
+.visit-location p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.visit-location strong {
+    color: var(--ut-burnt-orange);
+}
+
+.map-embed {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 360px;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+
+.map-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 /* News Archive Styles (for news.html) */
 .news-archive {
     margin-top: 30px;
