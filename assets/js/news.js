@@ -3,6 +3,18 @@
 
 const newsData = [
     {
+        date: "July 17, 2026",
+        title: "Welcome Antony to GAMMA",
+        content: "Antony joins GAMMA and will work on AI methods for materials synthesis. Welcome, Antony!",
+        isRecent: true
+    },
+    {
+        date: "July 17, 2026",
+        title: "Welcome Jed to GAMMA",
+        content: "Jed joins GAMMA and will work on agentic AI and robotics to automate materials experiments. We are excited to have Jed on board!",
+        isRecent: true
+    },
+    {
         date: "Mar 3, 2026",
         title: "Welcome Tianyu to GAMMA",
         content: "Tianyu will join us in Summer 2026 as a PhD student, working on machine learning and agentic AI methods for computational materials. We are excited to have him on board!",
@@ -18,7 +30,7 @@ const newsData = [
         date: "August 27, 2025",
         title: "Preprint Released: An Agentic Artificially Intelligent X-ray Scientist",
         content: "Our team has released a new preprint demonstrating the first AI agent capable of autonomously planning and executing X-ray scattering experiments on a real beamline at BL17-2, SSRL, SLAC! Read more here: <a href='https://doi.org/10.21203/rs.3.rs-7456716/v1' target='_blank' rel='noopener noreferrer'>https://doi.org/10.21203/rs.3.rs-7456716/v1</a>.",
-        isRecent: true
+        isRecent: false
     },
     {
         date: "May 29, 2025",

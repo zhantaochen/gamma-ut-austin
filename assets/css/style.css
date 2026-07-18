@@ -621,7 +621,7 @@ h1, h2, h3, h4, h5, h6, .nav, .logo-text {
 /* Team Styles */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
