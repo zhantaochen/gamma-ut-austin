@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "July 18, 2026",
+        title: "Welcome Venu to GAMMA",
+        content: "A slightly overdue welcome! Venu has already been with the group for a while, but we're glad to finally have him on our website. Welcome to GAMMA, Venu!",
+        isRecent: true
+    },
+    {
         date: "July 17, 2026",
         title: "Welcome Antony to GAMMA",
         content: "Antony joins GAMMA and will work on AI methods for materials synthesis. Welcome, Antony!",
