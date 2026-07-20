@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "July 20, 2026",
+        title: "Welcome Tong to GAMMA",
+        content: "Welcome to GAMMA, Tong! We're excited to have you join the group. Tong's research spans experimental materials science, computational modeling, and AI, and he will lead our efforts in TMI's agentic AI and autonomous materials laboratories. Welcome aboard!",
+        isRecent: true
+    },
+    {
         date: "July 18, 2026",
         title: "Welcome Venu to GAMMA",
         content: "A slightly overdue welcome! Venu has already been with the group for a while, but we're glad to finally have him on our website. Welcome to GAMMA, Venu!",
