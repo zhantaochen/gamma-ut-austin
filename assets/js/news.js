@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "August 13, 2026",
+        title: "New preprints released!",
+        content: "<strong>Observation Geometry for Uncertainty-Aware Hamiltonian Inference and Experimental Design in Quantum Magnets</strong> <a href='https://doi.org/10.48550/arXiv.2608.10350' target='_blank' rel='noopener noreferrer'>(arXiv:2608.10350)</a> introduces a framework for quantifying parameter uncertainty and guiding experimental design in quantum magnets using multimodal neutron scattering data. Congratulations to Roy, Venu, Tianyu (Tyler), and Zhantao!",
+        isRecent: true
+    },
+    {
         date: "July 20, 2026",
         title: "Welcome Tong to GAMMA",
         content: "Welcome to GAMMA, Tong! We're excited to have you join the group. Tong's research spans experimental materials science, computational modeling, and AI, and he will lead our efforts in TMI's agentic AI and autonomous materials laboratories. Welcome aboard!",
@@ -62,7 +68,7 @@ function loadRecentNews() {
     newsContainer.innerHTML = recentNews.map(news => {
         // Truncate content if too long (optional - you can remove this if you want full content)
         const maxLength = 150;
-        let content = news.content;
+        let content = news.content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
         if (content.length > maxLength) {
             content = content.substring(0, maxLength) + '...';
         }
@@ -87,9 +93,9 @@ function loadAllNews() {
         <div class="news-article">
             <div class="news-date">${news.date}</div>
             <h3>${news.title}</h3>
-            <div class="news-content">
-                <p>${news.content}</p>
-            </div>
+                <div class="news-content">
+                    ${news.content}
+                </div>
         </div>
     `).join('');
 }
