@@ -4,7 +4,7 @@
 const newsData = [
     {
         date: "August 13, 2026",
-        title: "New preprints released!",
+        title: "New preprint released!",
         content: "<strong>Observation Geometry for Uncertainty-Aware Hamiltonian Inference and Experimental Design in Quantum Magnets</strong> <a href='https://doi.org/10.48550/arXiv.2608.10350' target='_blank' rel='noopener noreferrer'>(arXiv:2608.10350)</a> introduces a framework for quantifying parameter uncertainty and guiding experimental design in quantum magnets using multimodal neutron scattering data. Congratulations to Roy, Venu, Tianyu (Tyler), and Zhantao!",
         isRecent: true
     },
