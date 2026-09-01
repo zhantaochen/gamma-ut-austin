@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "August 24, 2026",
+        title: "Two recent works published in Nature Machine Intelligence",
+        content: "We are excited to share two recent works in Nature Machine Intelligence: <a href='https://www.nature.com/articles/s42256-026-01287-9' target='_blank' rel='noopener noreferrer'>an AI-based approach to scientific data compression</a> that preserves fine experimental details, featured in a <a href='https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail' target='_blank' rel='noopener noreferrer'>SLAC news article</a>; and <a href='https://www.nature.com/articles/s42256-026-01261-5' target='_blank' rel='noopener noreferrer'><strong>An agentic artificially intelligent X-ray scientist</strong></a>, which demonstrates autonomous sample alignment at a synchrotron X-ray beamline and is featured in <a href='https://phys.org/news/2026-07-ai-agent-synchrotron-ray-experimental.html' target='_blank' rel='noopener noreferrer'>Phys.org</a>.",
+        isRecent: true
+    },
+    {
         date: "August 13, 2026",
         title: "New preprint released!",
         content: "<strong>Observation Geometry for Uncertainty-Aware Hamiltonian Inference and Experimental Design in Quantum Magnets</strong> <a href='https://doi.org/10.48550/arXiv.2608.10350' target='_blank' rel='noopener noreferrer'>(arXiv:2608.10350)</a> introduces a framework for quantifying parameter uncertainty and guiding experimental design in quantum magnets using multimodal neutron scattering data. Congratulations to Roy, Venu, Tianyu (Tyler), and Zhantao!",
