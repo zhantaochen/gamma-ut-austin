@@ -59,9 +59,16 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid var(--line);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.58);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+    box-shadow: 0 8px 24px rgba(31, 42, 48, 0.08);
+    backdrop-filter: blur(18px) saturate(1.1);
+}
+
+.home-page .hero {
+    min-height: 100vh;
+    margin-top: -76px;
+    padding-top: 168px;
 }
 
 .header-content {
@@ -78,19 +85,15 @@ a:hover {
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
     color: var(--ut-charcoal);
     text-decoration: none;
     flex: 0 0 auto;
 }
 
-.logo::before {
-    content: '';
-    width: 12px;
-    height: 42px;
-    background: var(--ut-burnt-orange);
-    border-radius: 1px;
-    display: inline-block;
+.logo img {
+    display: block;
+    width: 220px;
+    height: auto;
 }
 
 .logo-icon {
@@ -205,7 +208,7 @@ a:hover {
 /* Hero */
 .hero {
     position: relative;
-    min-height: calc(100vh - 76px);
+    min-height: calc(100vh - 104px);
     padding: 92px 0 112px;
     overflow: hidden;
     display: flex;
@@ -682,7 +685,6 @@ a:hover {
     height: 100%;
     border: 0;
     display: block;
-    filter: grayscale(1) contrast(0.94) brightness(1.03);
 }
 
 /* News archive */
@@ -767,6 +769,11 @@ a:hover {
         padding: 78px 0 102px;
     }
 
+    .home-page .hero {
+        min-height: auto;
+        padding-top: 182px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -804,13 +811,8 @@ a:hover {
         font-size: 1.55rem;
     }
 
-    .logo::before {
-        width: 9px;
-        height: 34px;
-    }
-
-    .logo-text {
-        font-size: 0.94rem;
+    .logo img {
+        width: 190px;
     }
 
     .nav {
@@ -856,8 +858,8 @@ a:hover {
 }
 
 @media (max-width: 460px) {
-    .logo-text {
-        max-width: 220px;
+    .logo img {
+        width: 170px;
     }
 
     .hero-text h1 {
