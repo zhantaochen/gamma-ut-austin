@@ -3,6 +3,12 @@
 
 const newsData = [
     {
+        date: "October 1, 2026",
+        title: "David won the Best Poster Award at TACCSTER 2026",
+        content: "Congratulations to David on winning a Best Poster award at TACCSTER 2026! Well done, David! This is the first student award in our group, making it an especially meaningful milestone.",
+        isRecent: true
+    },
+    {
         date: "August 24, 2026",
         title: "Two recent works published in Nature Machine Intelligence",
         content: "We are excited to share two recent works in Nature Machine Intelligence: <a href='https://www.nature.com/articles/s42256-026-01287-9' target='_blank' rel='noopener noreferrer'>an AI-based approach to scientific data compression</a> that preserves fine experimental details, featured in a <a href='https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail' target='_blank' rel='noopener noreferrer'>SLAC news article</a>; and <a href='https://www.nature.com/articles/s42256-026-01261-5' target='_blank' rel='noopener noreferrer'><strong>An agentic artificially intelligent X-ray scientist</strong></a>, which demonstrates autonomous sample alignment at a synchrotron X-ray beamline and is featured in <a href='https://phys.org/news/2026-07-ai-agent-synchrotron-ray-experimental.html' target='_blank' rel='noopener noreferrer'>Phys.org</a>.",
