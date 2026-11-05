@@ -3,6 +3,18 @@
 
 const newsData = [
     {
+        date: "November 5, 2026",
+        title: "New preprint released!",
+        content: "<strong>Learning materials spectra across modalities and scales with structure-conditioned neural fields</strong> <a href='https://arxiv.org/abs/2611.01417v1' target='_blank' rel='noopener noreferrer'>(arXiv:2611.01417)</a> presents a neural-field framework that learns continuous spectroscopic response functions directly from atomic structures, from one-dimensional densities of states to multidimensional scattering functions. Congratulations to Tianyu (Tyler), Roy, and Zhantao!",
+        isRecent: true
+    },
+    {
+        date: "November 5, 2026",
+        title: "Welcome Mehdi to GAMMA",
+        content: "Mehdi joins GAMMA as an Undergraduate Research Assistant. He has robotics experience through Texas Aerial Robotics and Texas Humanoids, and is interested in robotic perception and localization, control systems, and autonomous laboratory systems. Welcome, Mehdi!",
+        isRecent: true
+    },
+    {
         date: "October 1, 2026",
         title: "David won the Best Poster Award at TACCSTER 2026",
         content: "Congratulations to David on winning a Best Poster award at TACCSTER 2026! Well done, David! This is the first student award in our group, making it an especially meaningful milestone.",
