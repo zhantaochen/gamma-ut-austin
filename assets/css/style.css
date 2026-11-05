@@ -443,8 +443,6 @@ a:hover {
 
 .hero-description {
     max-width: 720px;
-    padding-left: 24px;
-    border-left: 6px solid var(--ut-burnt-orange);
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.12rem;
 }
@@ -475,7 +473,6 @@ a:hover {
 .news-sidebar {
     padding: 28px;
     border: 1px solid rgba(255, 255, 255, 0.28);
-    border-top: 5px solid var(--ut-burnt-orange);
     border-radius: var(--radius);
     color: var(--ut-white);
     background: rgba(31, 42, 48, 0.72);
@@ -558,7 +555,6 @@ a:hover {
 
 .team-member {
     padding: 26px;
-    border-top: 5px solid var(--ut-burnt-orange);
     text-align: left;
     transition: transform 160ms ease, box-shadow 160ms ease;
 }
@@ -613,7 +609,7 @@ a:hover {
 .member-background {
     margin-bottom: 14px;
     padding: 10px 12px;
-    border-left: 4px solid var(--ut-burnt-orange);
+    border-radius: var(--radius);
     background: var(--orange-soft);
     color: var(--heading);
     font-size: 0.88rem;
@@ -652,8 +648,7 @@ a:hover {
 }
 
 .research-content {
-    padding: 0 0 0 18px;
-    border-left: 5px solid var(--ut-burnt-orange);
+    padding: 0;
 }
 
 .research-content h3 {
@@ -692,25 +687,13 @@ a:hover {
 }
 
 .publication-item {
-    position: relative;
     margin-bottom: 0;
-    padding: 20px 0 20px 22px;
+    padding: 20px 0;
     border: 0;
     border-bottom: 1px solid var(--line);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-}
-
-.publication-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 24px;
-    width: 6px;
-    height: calc(100% - 48px);
-    min-height: 28px;
-    background: var(--ut-burnt-orange);
 }
 
 .publication-title {
@@ -747,7 +730,6 @@ a:hover {
 
 .contact-info {
     padding: 28px;
-    border-top: 5px solid var(--ut-burnt-orange);
 }
 
 .contact-info h3 {
@@ -794,25 +776,13 @@ a:hover {
 
 /* News archive */
 .news-article {
-    position: relative;
     margin-bottom: 0;
-    padding: 20px 0 20px 22px;
+    padding: 20px 0;
     border: 0;
     border-bottom: 1px solid var(--line);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-}
-
-.news-article::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 24px;
-    width: 6px;
-    height: calc(100% - 48px);
-    min-height: 28px;
-    background: var(--ut-burnt-orange);
 }
 
 .news-article h3 {
@@ -947,7 +917,6 @@ a:hover {
     }
 
     .hero-description {
-        padding-left: 16px;
         font-size: 1rem;
     }
 
@@ -957,9 +926,6 @@ a:hover {
     }
 
     .team-member,
-    .research-content,
-    .publication-item,
-    .news-article,
     .contact-info,
     .news-sidebar {
         padding: 22px;
